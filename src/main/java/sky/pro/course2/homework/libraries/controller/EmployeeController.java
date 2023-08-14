@@ -26,13 +26,13 @@ public class EmployeeController {
     }
 
     @GetMapping("/remove")
-    public Employee deleteEmployee(@RequestParam("name") String firstName, @RequestParam("surname") String lastName) {
-        return employeeService.deleteEmployee(firstName, lastName);
+    public Employee deleteEmployee(@RequestParam("name") String name, @RequestParam("surname") String surname) {
+        return employeeService.deleteEmployee(name, surname);
     }
 
     @GetMapping("/find")
-    public Employee findByName(@RequestParam("name") String firstName, @RequestParam("surname") String lastName) {
-        return employeeService.findByName(firstName, lastName);
+    public Employee findByName(@RequestParam("name") String name, @RequestParam("surname") String surname) {
+        return employeeService.findByName(name, surname);
     }
 
     @GetMapping("/printEmployeeList")
